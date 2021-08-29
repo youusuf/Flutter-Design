@@ -1,9 +1,9 @@
 part of home;
 
 class _Header extends StatelessWidget {
-  const _Header({required this.username, Key? key}) : super(key: key);
+  const _Header({required this.user, Key? key}) : super(key: key);
 
-  final String username;
+  final _User user;
   final double _maxWidthForUsername = 200.0;
 
   @override
@@ -44,7 +44,7 @@ class _Header extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(maxWidth: _maxWidthForUsername),
       child: Text(
-        username.capitalizeFirst!,
+        user.name.capitalizeFirst!,
         style: TextStyle(fontSize: 20),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,

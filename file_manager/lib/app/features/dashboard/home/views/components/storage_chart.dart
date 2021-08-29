@@ -2,14 +2,12 @@ part of home;
 
 class _StorageChart extends StatelessWidget {
   const _StorageChart({
-    required this.totalFree,
-    required this.totalUsed,
+    required this.usage,
     this.radius = 200,
     Key? key,
   }) : super(key: key);
 
-  final int totalFree;
-  final int totalUsed;
+  final _Usage usage;
   final double radius;
 
   @override
@@ -44,7 +42,7 @@ class _StorageChart extends StatelessWidget {
               flex: 4,
               child: _indicatorUsage(
                 color: Colors.grey[300]!,
-                title: "$totalFree GB",
+                title: filesize(usage.totalFree, 0),
                 subtitle: "free",
               ),
             ),
@@ -52,7 +50,7 @@ class _StorageChart extends StatelessWidget {
               flex: 4,
               child: _indicatorUsage(
                 color: Theme.of(context).primaryColor,
-                title: "$totalUsed GB",
+                title: filesize(usage.totalUsed, 0),
                 subtitle: "used",
               ),
             ),
@@ -108,7 +106,7 @@ class _StorageChart extends StatelessWidget {
   }
 
   double getUsedPercent() {
-    int _maxStorage = totalFree + totalUsed;
-    return (totalUsed / _maxStorage) * 100;
+    int _maxStorage = usage.totalFree + usage.totalUsed;
+    return (usage.totalUsed / _maxStorage) * 100;
   }
 }
