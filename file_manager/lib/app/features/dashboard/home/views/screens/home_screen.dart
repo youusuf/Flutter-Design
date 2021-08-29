@@ -1,6 +1,8 @@
 library home;
 
 import 'package:file_manager/app/constans/app_constants.dart';
+import 'package:file_manager/app/shared_components/custom_button.dart';
+import 'package:file_manager/app/shared_components/header_text.dart';
 import 'package:file_manager/app/shared_components/search_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,6 +15,7 @@ part '../../bindings/home_binding.dart';
 part '../../controllers/home_controller.dart';
 
 // component
+part '../components/category.dart';
 part '../components/header.dart';
 part '../components/storage_chart.dart';
 
@@ -38,6 +41,10 @@ class HomeScreen extends StatelessWidget {
                     totalFree: 80,
                     totalUsed: 785,
                   ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(kDefaultSpacing),
+                  child: _Category(),
                 ),
               ]),
               hasScrollBody: false,
