@@ -25,6 +25,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.3.8
+  percent_indicator: ^3.0.1
 
 dev_dependencies:
   flutter_test:
