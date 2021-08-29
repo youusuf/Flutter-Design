@@ -4,6 +4,7 @@ part of 'app_pages.dart';
 class Routes {
   static const dashboard = _Paths.dashboard;
   static const home = _Paths.home;
+  static const cloud = _Paths.cloud;
 }
 
 /// contains a list of route names.
@@ -20,4 +21,5 @@ class _Paths {
 
   static const dashboard = '/dashboard';
   static const home = '/home';
+  static const cloud = '/cloud';
 }
