@@ -1,6 +1,8 @@
 library cloud;
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:file_manager/app/constans/app_constants.dart';
+import 'package:file_manager/app/shared_components/card_cloud.dart';
 import 'package:file_manager/app/shared_components/search_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,6 +15,7 @@ part '../../controllers/cloud_controller.dart';
 
 // component
 part '../components/header.dart';
+part '../components/card_service.dart';
 
 class CloudScreen extends GetView<CloudController> {
   const CloudScreen({Key? key}) : super(key: key);
@@ -30,6 +33,7 @@ class CloudScreen extends GetView<CloudController> {
                   padding: const EdgeInsets.all(kDefaultSpacing),
                   child: _Header(),
                 ),
+                _CardService(),
               ]),
               hasScrollBody: false,
             )

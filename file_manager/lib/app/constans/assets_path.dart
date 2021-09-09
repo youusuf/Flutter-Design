@@ -18,6 +18,9 @@ class ImageRaster {
   static const _path = "assets/images/raster";
 
   static const wavingHandEmoji = "$_path/waving-hand-emoji.png";
+  static const boxCoins = "$_path/box_coins.png";
+  static const megaphone = "$_path/megaphone.png";
+  static const rocket = "$_path/rocket.png";
 }
 
 class ImageVector {
