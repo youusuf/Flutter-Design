@@ -1,5 +1,9 @@
 library dashboard;
 
+import 'dart:developer';
+
+import 'package:file_manager/app/constans/app_constants.dart';
+
 import '../../../../../shared_components/header_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,6 +17,7 @@ part '../../controllers/dashboard_controller.dart';
 // model
 
 // component
+part '../components/bottom_navbar.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -22,6 +27,13 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: HeaderText("dashboard"),
+      ),
+      bottomNavigationBar: _BottomNavbar(
+        onSelected: (index) {
+          log(
+            index.toString(),
+          );
+        },
       ),
     );
   }
