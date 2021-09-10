@@ -9,23 +9,17 @@ part 'app_routes.dart';
 /// contains all configuration pages
 class AppPages {
   /// when the app is opened this page will be the first to be shown
-  static const initial = Routes.cloud;
+  static const initial = Routes.dashboard;
 
   static final routes = [
     GetPage(
       name: _Paths.dashboard,
       page: () => DashboardScreen(),
-      binding: DashboardBinding(),
+      bindings: [
+        DashboardBinding(),
+        HomeBinding(),
+        CloudBinding(),
+      ],
     ),
-    GetPage(
-      name: _Paths.home,
-      page: () => HomeScreen(),
-      binding: HomeBinding(),
-    ),
-    GetPage(
-      name: _Paths.cloud,
-      page: () => CloudScreen(),
-      binding: CloudBinding(),
-    )
   ];
 }

@@ -28,6 +28,12 @@ class _Category extends StatelessWidget {
       label: "music",
       onPressed: () {},
     ),
+    CustomButton(
+      icon: CustomIcons.music,
+      color: Colors.orangeAccent,
+      label: "music",
+      onPressed: () {},
+    ),
   ];
 
   @override
