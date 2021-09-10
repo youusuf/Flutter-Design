@@ -15,17 +15,11 @@ class AppPages {
     GetPage(
       name: _Paths.dashboard,
       page: () => DashboardScreen(),
-      binding: DashboardBinding(),
+      bindings: [
+        DashboardBinding(),
+        HomeBinding(),
+        CloudBinding(),
+      ],
     ),
-    GetPage(
-      name: _Paths.home,
-      page: () => HomeScreen(),
-      binding: HomeBinding(),
-    ),
-    GetPage(
-      name: _Paths.cloud,
-      page: () => CloudScreen(),
-      binding: CloudBinding(),
-    )
   ];
 }
