@@ -34,14 +34,23 @@ class CloudScreen extends GetView<CloudController> {
           physics: BouncingScrollPhysics(),
           slivers: [
             SliverList(
-              delegate: SliverChildListDelegate([
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultSpacing),
-                  child: _Header(),
-                ),
-                _CardService(),
-                SizedBox(height: kDefaultSpacing),
-              ]),
+              delegate: SliverChildListDelegate(
+                [
+                  Padding(
+                    padding: const EdgeInsets.all(kDefaultSpacing),
+                    child: _Header(),
+                  ),
+                  _CardService(),
+                  SizedBox(height: kDefaultSpacing),
+                  Padding(
+                    padding: const EdgeInsets.all(kDefaultSpacing),
+                    child: Text(
+                      "Folder",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ],
+              ),
             ),
             _CardData(folderData: controller.folderData)
           ],
