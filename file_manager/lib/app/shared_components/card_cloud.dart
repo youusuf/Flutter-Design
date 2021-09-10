@@ -38,7 +38,7 @@ class CardCloud extends StatelessWidget {
             color: color.withOpacity(0.5),
             spreadRadius: 1,
             blurRadius: 10,
-            offset: Offset(0, 5), // changes position of shadow
+            offset: Offset(0, 5),
           ),
         ],
       ),
