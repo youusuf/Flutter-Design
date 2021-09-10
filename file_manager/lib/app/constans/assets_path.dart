@@ -1,12 +1,12 @@
 part of app_constants;
 
-class FontPath {
+class Font {
   // Example:
   // static const roboto = 'roboto';
   // static const arial = 'arial';
 }
 
-class ImageAnimationPath {
+class ImageAnimation {
   // you can get free animation image from rive or lottiefiles
 
   // Example:
@@ -14,16 +14,16 @@ class ImageAnimationPath {
   // static const myAnim = "$_folderPath/my_anim.json";
 }
 
-class ImageRasterPath {
-  // Example:
-  // static const _folderPath = "assets/images/raster";
-  // static const myRaster = "$_folderPath/my_raster.png";
-  // static const myRaster2 = "$_folderPath/my_raster2.jpg";
-  // static const myRaster3 = "$_folderPath/my_raster3.jpeg";
+class ImageRaster {
+  static const _path = "assets/images/raster";
+
+  static const wavingHandEmoji = "$_path/waving-hand-emoji.png";
+  static const boxCoins = "$_path/box_coins.png";
+  static const megaphone = "$_path/megaphone.png";
+  static const rocket = "$_path/rocket.png";
 }
 
-class ImageVectorPath {
-  // Example:
-  // static const _folderPath = "assets/images/vector";
-  // static const myVector = "$_folderPath/vector/my_vector.svg";
+class ImageVector {
+  static const _path = "assets/images/vector";
+  static const folder = "$_path/folder.svg";
 }

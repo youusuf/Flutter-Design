@@ -1,6 +1,6 @@
 library dashboard;
 
-import '../../../../shared_components/header_text.dart';
+import '../../../../../shared_components/header_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
