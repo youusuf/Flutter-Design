@@ -1,4 +1,4 @@
-import 'package:file_manager/app/constans/app_constants.dart';
+import 'package:file_manager/app/shared_components/file_type_icon.dart';
 import 'package:file_manager/app/utils/helpers/app_helpers.dart';
 import 'package:filesize/filesize.dart';
 import 'package:flutter/material.dart';
@@ -35,16 +35,7 @@ class FileListButton extends StatelessWidget {
       ),
       shadowColor: Colors.white,
       child: ListTile(
-        leading: Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            gradient: _gradient(data.type),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: _icon(data.type),
-        ),
+        leading: FileTypeIcon(data.type),
         title: Text(
           data.name,
           maxLines: 1,
@@ -67,70 +58,5 @@ class FileListButton extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  Widget _icon(FileType type) {
-    late IconData iconData;
-
-    switch (type) {
-      case FileType.msAccess:
-        iconData = CustomIcons.ms_access;
-        break;
-      case FileType.msExcel:
-        iconData = CustomIcons.ms_excel;
-        break;
-      case FileType.msOutlook:
-        iconData = CustomIcons.ms_outlook;
-        break;
-      case FileType.msPowerPoint:
-        iconData = CustomIcons.ms_power_point;
-        break;
-      case FileType.msWord:
-        iconData = CustomIcons.ms_word;
-        break;
-      default:
-        iconData = Icons.extension;
-        break;
-    }
-
-    return Icon(
-      iconData,
-      color: Colors.white,
-    );
-  }
-
-  LinearGradient _gradient(FileType type) {
-    switch (type) {
-      case FileType.msAccess:
-        return LinearGradient(colors: [
-          Colors.redAccent,
-          Colors.red,
-        ]);
-      case FileType.msExcel:
-        return LinearGradient(colors: [
-          Colors.greenAccent,
-          Colors.green,
-        ]);
-      case FileType.msOutlook:
-        return LinearGradient(colors: [
-          Colors.lightBlueAccent,
-          Colors.lightBlue,
-        ]);
-      case FileType.msPowerPoint:
-        return LinearGradient(colors: [
-          Colors.orangeAccent,
-          Colors.orange,
-        ]);
-      case FileType.msWord:
-        return LinearGradient(colors: [
-          Colors.blueAccent,
-          Colors.blue,
-        ]);
-      default:
-        return LinearGradient(colors: [
-          Colors.deepOrangeAccent,
-          Colors.deepOrange,
-        ]);
-    }
   }
 }
