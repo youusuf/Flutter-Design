@@ -1,3 +1,6 @@
+![file manager thumbnail](https://user-images.githubusercontent.com/89120990/133015254-ba4b3485-b923-4131-848f-29f628d86f5b.png)
+
+
 # file_manager
 
 A new Flutter project.
