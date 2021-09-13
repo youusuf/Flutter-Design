@@ -2,9 +2,8 @@ part of 'app_pages.dart';
 
 /// used to switch pages
 class Routes {
+  static const splash = _Paths.splash;
   static const dashboard = _Paths.dashboard;
-  static const home = _Paths.home;
-  static const cloud = _Paths.cloud;
 }
 
 /// contains a list of route names.
@@ -19,7 +18,6 @@ class _Paths {
   // static const productAdd = '/product/add';
   //
 
+  static const splash = '/splash';
   static const dashboard = '/dashboard';
-  static const home = '/home';
-  static const cloud = '/cloud';
 }
